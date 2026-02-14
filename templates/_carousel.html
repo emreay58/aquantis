@@ -1,0 +1,26 @@
+   {% load static %}
+   <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5">
+        <div class="owl-carousel header-carousel position-relative mb-5">
+           {% for carousel in carousel|slice:":10"  %}
+            <div {% if forloop.first %} class="owl-carousel-item position-relative active" 
+            {% else %} class="owl-carousel-item position-relative"{% endif %}
+            > 
+                <img class="img-fluid" src="{{carousel.image.url}}" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">{{carousel.caption1}}</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">{{carousel.caption1}}</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">{{carousel.caption2}}</p>
+                                <a href="{% url "services" %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Carousel End -->

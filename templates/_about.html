@@ -1,0 +1,28 @@
+{% load static %}
+<!-- About Start -->
+    <div class="container-fluid overflow-hidden py-5 px-lg-0">
+        <div class="container about py-5 px-lg-0">
+            <div class="row g-5 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/about.jpg' %}" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="text-secondary text-uppercase mb-3">About Us</h6>
+                    <h1 class="mb-5">Your reliable partner across the Turkish Straits and all Turkish Ports</h1>
+                    <p class="mb-5">Aquantis Ship Agency is a leading ship agency in Türkiye, distinguished by deep industry expertise and a strong understanding of shipowners’, charterers’, managers’, and operators’ operational requirements. Since its establishment, the company has delivered flexible, responsive, and responsible ship agency services.</p>
+                    <p class="mb-5">Aquantis Ship Agency provides tailor-made solutions, operational efficiency, and 24/7 support to meet the evolving demands of the maritime industry.</p>
+                    <div class="row g-4 mb-5">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                            <i class="fa fa-globe fa-3x text-primary mb-3"></i>
+                            <h5>TRANSIT AGENCY</h5>
+                            <p class="m-0">We stand as a reliable partner for ship agency services in the Turkish Straits and throughout Türkiye.</p>
+                        </div>
+                    </div>
+                    <a href="{% url "services" %}" class="btn btn-primary py-3 px-5">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
