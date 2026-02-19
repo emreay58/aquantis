@@ -1,1 +1,1 @@
-web: gunicorn aquantis.wsgi
+web: gunicorn aquantis.wsgi 
