@@ -2,3 +2,4 @@
 .DB_Store
 /static
 /myenv
+/db.sqlite3
