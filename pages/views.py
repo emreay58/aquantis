@@ -5,8 +5,8 @@ from django.views.generic import TemplateView
 
 
 def Index(request):
-    service = ServiceModel.objects.all()
-    carousel = Carousel.objects.all()
+    service = ServiceModel.objects.all().order_by('id')
+    carousel = Carousel.objects.all().order_by('id')
 
     context = {
         'service' : service,
@@ -16,24 +16,13 @@ def Index(request):
     return render(request, 'pages/index.html', context)
 
 def About(request):
-    service = ServiceModel.objects.all()
-
-    context = {
-        'service' : service
-    }
-    return render(request, "pages/about.html", context)
+    return render(request, "pages/about.html")
 
 def Contact(request):
-    service = ServiceModel.objects.all()
-
-    context = {
-        'service' : service
-    }
-
-    return render(request, "pages/contact.html",context)
+    return render(request, "pages/contact.html")
 
 def Service(request):
-    service = ServiceModel.objects.all()
+    service = ServiceModel.objects.all().order_by('id')
 
     context = {
         'service' : service
